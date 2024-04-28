@@ -3,14 +3,15 @@ import ffmpeg
 
 from subprocess import run
 import os
+import re
 
 def download_video(url, res=None, dir=''):
     yt = YouTube(url)
     
-    banned = ['/', '\\', '|', '<', '>', '*', ':', '"', '?']
+    banned = r'[a-zA-Z0-9_\-\.]'
     
     # bu alttaki satir calisiyormu test edilmedi
-    title = ''.join([yt.title.replace(x, '') for x in banned])
+    title = re.sub(f'[^{banned}]', '', yt.title)
 
     yt.streams.filter(only_audio=True).first().download(filename= dir + title + '_audio.mp4')    
     

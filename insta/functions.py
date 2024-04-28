@@ -1,9 +1,12 @@
 from instaloader import Instaloader, Profile
 import instaloader
 
+import re
 import subprocess
 
 L = Instaloader()
+
+banned  = r'[a-zA-Z0-9_\-\.]'
 
 def download_profile(username):
     PROFILE = username
@@ -18,6 +21,12 @@ def download_profile_pic(username):
 def download_stories(username):
     L.download_profile(username, download_stories_only=True)
 
-# def download_post(id):
-#     subprocess.run('instaloader -- -{}'.format(id))
+def download_post(url):
+    shortCode = url.split('/')[-2]
 
+    print(shortCode)
+    post = instaloader.Post.from_shortcode(L.context, shortCode)
+    
+    name = re.sub(f'[^{banned}]', '', post.caption)
+
+    L.download_post(post, target=name)
