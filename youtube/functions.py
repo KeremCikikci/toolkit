@@ -6,8 +6,11 @@ import os
 
 def download_video(url, res=None, dir=''):
     yt = YouTube(url)
-
-    title = yt.title.replace('/', '').replace('\\', '').replace('|', '').replace('<', '').replace('>', '').replace('*', '').replace(':', '').replace('"', '').replace('?', '')
+    
+    banned = ['/', '\\', '|', '<', '>', '*', ':', '"', '?']
+    
+    # bu alttaki satir calisiyormu test edilmedi
+    title = ''.join([yt.title.replace(x, '') for x in banned])
 
     yt.streams.filter(only_audio=True).first().download(filename= dir + title + '_audio.mp4')    
     

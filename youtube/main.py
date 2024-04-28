@@ -5,5 +5,3 @@ from functions import *
 
 ### Download Playlist ###
 # download_playlist(url, dir, res='audio')
-
-### Download subscribers ###
