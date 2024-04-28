@@ -4,13 +4,13 @@ from functions import *
 # download_profile('username')
 
 ### Download Post ###
-# download_post('https://www.instagram.com/p/CkYhqizD8Np/')
+# download_post('url)
 
 ### Download Profile Picture ###
-# download_profile_pic('dilara_matematik')
+# download_profile_pic('username')
 
 ### Download Stories ###
-# download_stories('dilara_matematik')
+# download_stories('username')
 
 
 
