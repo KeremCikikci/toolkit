@@ -7,7 +7,7 @@ from phonenumbers import carrier
 
 import folium
 
-number = "+905367930782"
+number = "telno"
 
 pepnumber = phonenumbers.parse(number)
 location = geocoder.description_for_number(pepnumber, "en")
