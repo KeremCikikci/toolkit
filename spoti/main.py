@@ -1,6 +1,6 @@
 import subprocess
 
-# bu aslinda ytden indiriyor ama spotify linki giriyon
+# Download music from Spotify --> YT
 
 url = ""
 subprocess.run('spotdl ' + url)

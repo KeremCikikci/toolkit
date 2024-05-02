@@ -1,1 +1,0 @@
-### Direkt constantlari bulup yapistircaz o sayfaya ###

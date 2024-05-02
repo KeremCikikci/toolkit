@@ -3,11 +3,6 @@ from functions import *
 ### Convert ###
 # convert_unit('time', 'attosecond', 'femtosecond')
 
-# SI Unit Système international d'unités
-# Bu alttakilerle her sey ifade edilebiliyor base units
-# si_units = ['meter', 'kilogram', 'second', 'ampere', 'kelvin', 'mole', 'candela']
-# https://byjus.com/physics/si-units-list/#what%20is%20si%20unit
-# https://www.unitconverters.net/
 
 
 """

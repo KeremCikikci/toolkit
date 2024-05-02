@@ -10,7 +10,6 @@ def download_video(url, res=None, dir=''):
     
     banned = r'[a-zA-Z0-9_\-\.]'
     
-    # bu alttaki satir calisiyormu test edilmedi
     title = re.sub(f'[^{banned}]', '', yt.title)
 
     yt.streams.filter(only_audio=True).first().download(filename= dir + title + '_audio.mp4')    

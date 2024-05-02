@@ -15,17 +15,6 @@ def remove_bg(image):
         output.save(image.rpartition('.')[0] + '_bg.png') 
     except:
         pass
-    
-    """
-    Ben calistirdigim arka plan kaldiriliyor. Ek olarak senden istedigim arkaplanin 
-    kaldirilmis resmin acilmasi ve benim mouse ile ona müdahale edebilmem. 
-    Bunun icin söyle fonksiyonlar istiyorum. Acilmis resme scroll ile yaklasip 
-    uzaklasabilmek. Sol tik ile tikladigim yerlerin direkt olarak ayni arka 
-    planda oldugu gibi silinmesi ve sag tik ile bastigim yerlerde orjinal 
-    resmi geri getirmek. Ayrica mousenin sol tiki ve sag tiki ile yaptigim 
-    tüm islemler ben tiklardan parmagimi kaldirdigimda kaydedilsin. Böylece 
-    ctrl+z yaptigimda islemi geri alabileyim
-    """
 
 def find_max_differences(points):
     min_x = min(points, key=lambda p: p[0])[0]
